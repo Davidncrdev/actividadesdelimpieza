@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Páginas que no deben indexarse
+Disallow: /gracias.html
+Disallow: /politica-privacidad.html
+Disallow: /aviso-legal.html
+Disallow: /cookies.html
+Disallow: /404.html
+
+# No indexar archivos internos
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /pnpm-lock.yaml
+Disallow: /manifest.json
+Disallow: /browserconfig.xml
+Disallow: /.vercel/
+Disallow: /.git/
+
+# Sitemap
+Sitemap: https://actividadesdelimpieza.com/sitemap.xml
+
+# Crawl-delay (tiempo entre peticiones en segundos)
+Crawl-delay: 10

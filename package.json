@@ -1,5 +1,19 @@
 {
+  "name": "actividadesdelimpieza",
+  "version": "2.0.0",
+  "description": "Web profesional de servicios de limpieza en Málaga",
+  "private": true,
+  "scripts": {
+    "lint": "echo 'No linter configured yet'",
+    "typecheck": "echo 'No typecheck configured yet'",
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000",
+    "preview": "npx serve . -l 3000"
+  },
   "dependencies": {
     "@vercel/analytics": "^1.5.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
   }
 }

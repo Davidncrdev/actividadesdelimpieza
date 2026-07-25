@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros | Actividades de Limpieza en Málaga</title>
+  <meta name="description" content="Conoce a Actividades de Limpieza, empresa líder en servicios de limpieza profesional en Málaga con más de 15 años de experiencia y un equipo altamente cualificado.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#10b981">
+  <link rel="canonical" href="https://actividadesdelimpieza.com/sobre-nosotros.html">
+  <meta property="og:title" content="Sobre Nosotros | Actividades de Limpieza">
+  <meta property="og:description" content="Empresa de limpieza profesional en Málaga. Más de 15 años de experiencia.">
+  
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1e293b;background:#fff}
+    :root{--primary:#10b981;--primary-dark:#059669;--primary-light:#34d399;--secondary:#047857;--light:#f8fafc;--dark:#1e293b;--gray:#64748b;--light-gray:#e2e8f0;--white:#fff;--shadow:0 10px 15px -3px rgba(0,0,0,.1);--shadow-lg:0 20px 25px -5px rgba(0,0,0,.1);--transition:all .3s ease;--radius:12px;--radius-sm:8px}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--primary);color:var(--white);border:none;border-radius:var(--radius-sm);font-weight:600;font-size:1rem;cursor:pointer;transition:var(--transition);box-shadow:0 4px 6px -1px rgba(16,185,129,.3);text-align:center;justify-content:center}
+    .btn:hover{background:var(--primary-dark);transform:translateY(-2px)}
+    .btn-whatsapp{background:#25D366;box-shadow:0 4px 6px -1px rgba(37,211,102,.3)}
+    .btn-whatsapp:hover{background:#128C7E}
+    
+    header{background:rgba(255,255,255,.97);box-shadow:0 1px 3px 0 rgba(0,0,0,.08);position:fixed;width:100%;top:0;z-index:1000}
+    .navbar{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+    .logo{font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:var(--primary);display:flex;align-items:center;gap:10px}
+    .nav-links{display:flex;align-items:center;gap:8px}
+    .nav-links a{font-weight:500;font-size:.92rem;padding:6px 14px;border-radius:6px;transition:color .3s ease}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary)}
+    .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--white)!important;border-radius:50px;font-weight:600}
+    
+    .page-header{background:linear-gradient(135deg,rgba(16,185,129,.05),rgba(16,185,129,.1));padding:160px 0 80px;margin-top:70px;text-align:center}
+    .page-header h1{font-size:clamp(2rem,4vw,3.5rem);color:var(--dark);margin-bottom:20px}
+    
+    .breadcrumbs{background:var(--light);padding:12px 0;margin-top:70px}
+    .breadcrumbs ol{display:flex;align-items:center;gap:8px}
+    .breadcrumbs li{font-size:.9rem;color:var(--gray)}
+    .breadcrumbs li:not(:last-child)::after{content:'/';margin-left:8px}
+    .breadcrumbs a{color:var(--primary)}
+    
+    section{padding:80px 0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:60px}
+    .about-grid img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .about-text h2{font-size:2.5rem;margin-bottom:24px;color:var(--dark)}
+    .about-text p{font-size:1.1rem;color:var(--gray);margin-bottom:20px}
+    
+    .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:60px}
+    .value-card{padding:30px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;border:1px solid var(--light-gray);transition:var(--transition)}
+    .value-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+    .value-card i{font-size:2.5rem;color:var(--primary);margin-bottom:16px}
+    .value-card h3{font-size:1.3rem;margin-bottom:12px;color:var(--dark)}
+    .value-card p{color:var(--gray)}
+    
+    .team-section{background:var(--light);text-align:center}
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:40px}
+    .team-member{background:var(--white);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .team-member img{width:120px;height:120px;border-radius:50%;margin:0 auto 16px;object-fit:cover}
+    .team-member h3{color:var(--dark);margin-bottom:8px}
+    .team-member p{color:var(--gray)}
+    
+    .whatsapp-float{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background:#25D366;color:#FFF;border-radius:50px;font-size:30px;box-shadow:0 4px 20px rgba(37,211,102,.5);z-index:100;display:flex;align-items:center;justify-content:center}
+    
+    footer{background:var(--dark);color:var(--white);padding:80px 0 30px}
+    .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:60px}
+    .footer-column h3{font-size:1.2rem;margin-bottom:25px;position:relative}
+    .footer-column h3::after{content:'';position:absolute;left:0;bottom:-8px;width:40px;height:3px;background:var(--primary)}
+    .footer-column p{color:#b0b0b0}
+    .footer-links li{margin-bottom:12px}
+    .footer-links a{color:#b0b0b0;transition:var(--transition)}
+    .footer-links a:hover{color:var(--white)}
+    .footer-contact li{color:#b0b0b0;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .footer-contact i{color:var(--primary)}
+    .footer-bottom{text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);color:#b0b0b0}
+    
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .about-grid{grid-template-columns:1fr}
+      .page-header{padding:130px 0 60px}
+    }
+  </style>
+</head>
+<body>
+  <a href="https://wa.me/34642118972" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="Actividades de Limpieza" width="40" height="40">
+          <span>Actividades de Limpieza</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="sobre-nosotros.html" class="active">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="presupuesto.html" class="nav-cta">Presupuesto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li>Sobre Nosotros</li>
+      </ol>
+    </div>
+  </nav>
+  
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Sobre Actividades de Limpieza</h1>
+        <p>Más de 15 años ofreciendo servicios profesionales de limpieza en Málaga</p>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <h2>Nuestra Historia</h2>
+            <p>Actividades de Limpieza nació hace más de 15 años con un objetivo claro: ofrecer servicios de limpieza profesional de la más alta calidad en Málaga y provincia.</p>
+            <p>Desde nuestros inicios, nos hemos caracterizado por la seriedad, el compromiso y la profesionalidad en cada uno de nuestros servicios. Hemos crecido junto a nuestros clientes, adaptándonos a sus necesidades y ofreciendo soluciones innovadoras.</p>
+            <p>Hoy, somos una empresa consolidada con un equipo de profesionales cualificados y la confianza de más de 127 clientes satisfechos.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Nuestro equipo" loading="lazy">
+        </div>
+        
+        <div class="values-grid">
+          <div class="value-card">
+            <i class="fas fa-medal"></i>
+            <h3>Calidad</h3>
+            <p>Utilizamos los mejores productos y técnicas para garantizar resultados excepcionales.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-handshake"></i>
+            <h3>Confianza</h3>
+            <p>Más de 15 años de experiencia y cientos de clientes satisfechos nos avalan.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Sostenibilidad</h3>
+            <p>Productos ecológicos y prácticas respetuosas con el medio ambiente.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-clock"></i>
+            <h3>Puntualidad</h3>
+            <p>Cumplimos estrictamente con los horarios acordados para no interferir en su rutina.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="team-section">
+      <div class="container">
+        <h2>Nuestro Equipo</h2>
+        <p style="color:var(--gray);max-width:700px;margin:20px auto">Profesionales cualificados y comprometidos con la excelencia</p>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Director" loading="lazy">
+            <h3>Antonio García</h3>
+            <p>Director General</p>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Supervisora" loading="lazy">
+            <h3>María López</h3>
+            <p>Supervisora de Operaciones</p>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80" alt="Técnico" loading="lazy">
+            <h3>Carlos Ruiz</h3>
+            <p>Técnico Especialista</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Actividades de Limpieza</h3>
+          <p>Servicios profesionales de limpieza en Málaga desde 2008.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Enlaces</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="sobre-nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contacto</h3>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone"></i> 654 47 87 27</li>
+            <li><i class="fas fa-envelope"></i> info@actividadesdelimpieza.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Málaga, España</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Actividades de Limpieza | <a href="politica-privacidad.html" style="color:#b0b0b0">Privacidad</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
