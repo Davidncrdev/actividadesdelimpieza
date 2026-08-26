@@ -3,13 +3,16 @@ Allow: /
 
 # Páginas que no deben indexarse
 Disallow: /gracias.html
+Disallow: /gracias
 Disallow: /politica-privacidad.html
+Disallow: /politica-privacidad
 Disallow: /aviso-legal.html
+Disallow: /aviso-legal
 Disallow: /cookies.html
+Disallow: /cookies
 Disallow: /404.html
 
-# No indexar archivos internos
-Disallow: /node_modules/
+# Archivos internos
 Disallow: /package.json
 Disallow: /package-lock.json
 Disallow: /pnpm-lock.yaml
@@ -18,8 +21,4 @@ Disallow: /browserconfig.xml
 Disallow: /.vercel/
 Disallow: /.git/
 
-# Sitemap
 Sitemap: https://actividadesdelimpieza.com/sitemap.xml
-
-# Crawl-delay (tiempo entre peticiones en segundos)
-Crawl-delay: 10
