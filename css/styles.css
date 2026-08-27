@@ -237,17 +237,22 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .nav-logo {
   display: inline-flex; align-items: center; gap: 0.7rem;
+  min-width: 0; /* permite que el logo se encoja antes que el burger en móvil */
   text-decoration: none; font-weight: 800; font-size: 1.02rem; letter-spacing: -0.02em;
 }
-.nav-logo img { width: 34px; height: 34px; border-radius: 9px; }
+.nav-logo img { width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0; }
 .nav-logo .logo-mark {
   width: 34px; height: 34px; border-radius: 9px;
   background: var(--accent-strong); color: #06130c;
   display: grid; place-items: center; font-weight: 800; font-size: 0.95rem;
 }
-.nav-logo .logo-word { display: flex; flex-direction: column; line-height: 1.15; }
+.nav-logo .logo-word { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
 .nav-logo .logo-word b { font-size: 0.95rem; letter-spacing: -0.01em; }
 .nav-logo .logo-word span { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-text); }
+/* Solo en el header: si el logo se aprieta, recorta con puntos suspensivos
+   en vez de desbordar (el footer reutiliza .nav-logo y sí puede envolver). */
+.nav .nav-logo .logo-word b,
+.nav .nav-logo .logo-word span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .nav-links { display: none; align-items: center; gap: 0.2rem; }
 .nav-links a {
@@ -275,13 +280,24 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .nav-burger:active { transform: scale(0.94); }
 .nav-burger svg { width: 20px; height: 20px; }
-.nav-burger[aria-expanded="true"] svg { display: none; }
+.nav-burger svg:last-child { display: none; } /* la X solo se muestra al abrir */
+.nav-burger[aria-expanded="true"] svg:first-child { display: none; }
+.nav-burger[aria-expanded="true"] svg:last-child { display: block; }
 
 @media (min-width: 768px) {
   .nav-burger { display: none; }
   .nav-tel { display: inline-flex; }
 }
 @media (min-width: 1060px) { .nav-links { display: flex; } }
+
+/* Nav compacta en móvil: el CTA vive en la barra fija y en el menú,
+   así el logo y el burger (menú móvil) caben en pantallas pequeñas. */
+@media (max-width: 480px) {
+  .nav-inner { gap: 0.75rem; }
+  .nav-cta { display: none; }
+  .nav-logo .logo-word span { display: none; }
+  .nav-logo .logo-word b { font-size: 0.9rem; }
+}
 
 /* Menú móvil — panel deslizante */
 .mobile-menu {
@@ -350,6 +366,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.2rem; }
+/* En pantallas muy estrechas los CTAs se apilan a ancho completo (evita recortes). */
+@media (max-width: 360px) {
+  .hero-ctas .btn, .cta-actions .btn { width: 100%; }
+}
 
 .hero-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 1.6rem; margin-top: 2.4rem; }
 .hero-proof-stars { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; font-size: 0.95rem; }
@@ -648,6 +668,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .mobile-cta.is-visible { transform: translateY(0); }
 .mobile-cta .btn { padding: 0.85rem 0.5rem; font-size: 0.92rem; }
 @media (min-width: 641px) { .mobile-cta { display: none; } }
+/* La barra fija tapa el final del footer: se compensa con padding en el body. */
+@media (max-width: 640px) {
+  body { padding-bottom: calc(4.6rem + env(safe-area-inset-bottom)); }
+}
 
 /* ═══════════════ Breadcrumbs ═══════════════ */
 
@@ -675,6 +699,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 /* ═══════════════ Layouts de contenido ═══════════════ */
 
 .layout-split { display: grid; gap: 3rem; }
+/* min-width:0 evita que el contenido (FAQ, imágenes…) ensanche la columna
+   y desborde el viewport en móvil (grid blowout). */
+.layout-split > * { min-width: 0; }
 @media (min-width: 960px) { .layout-split { grid-template-columns: 0.85fr 1.15fr; } }
 
 .sticky-col { position: sticky; top: calc(var(--nav-h) + 32px); align-self: start; }
@@ -706,6 +733,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .prose th, .prose td { text-align: left; padding: 0.8rem 0.9rem; border-bottom: 1px solid var(--border); }
 .prose th { color: var(--text); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .prose td { color: var(--text-2); }
+/* En móvil la tabla se vuelve un bloque con scroll horizontal (no la recorta). */
+@media (max-width: 719px) {
+  .prose table { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+}
 
 /* ═══════════════ Paneles / tarjetas genéricas ═══════════════ */
 
@@ -744,6 +775,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
+}
+/* iOS Safari hace zoom al enfocar campos con font-size < 16px. */
+@media (max-width: 640px) {
+  .field input, .field select, .field textarea { font-size: 16px; }
+}
+
+/* Textos largos sin espacio (emails, teléfonos) pueden romper línea en móvil
+   para no empujar las columnas del grid fuera del viewport. */
+@media (max-width: 640px) {
+  .prose p, .prose li, .row p, .checks li, .notice p, .footer-nap li { overflow-wrap: anywhere; }
 }
 .field.invalid input, .field.invalid textarea { border-color: #e5484d; }
 .field-error { display: none; font-size: 0.78rem; color: #ff8085; margin-top: 0.35rem; }
@@ -790,6 +831,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .post-card h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; line-height: 1.25; letter-spacing: -0.01em; }
 .post-card p { font-size: 0.9rem; color: var(--text-2); }
 .post-card .read-more { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 800; color: var(--accent-text); margin-top: auto; }
+/* Sin tamaño fijo, el <svg> hereda su default 300×150 y rompe la cuadrícula en móvil. */
+.post-card .read-more svg, .related-card .read-more svg { width: 14px; height: 14px; flex-shrink: 0; }
 
 /* Posts relacionados al final de los artículos */
 .related-grid { display: grid; gap: 1rem; margin-top: 1.6rem; }
