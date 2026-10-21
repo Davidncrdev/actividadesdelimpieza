@@ -1,0 +1,119 @@
+{
+ "malaga-muelle-uno": {
+  "title": "Paseo del Muelle Uno, Málaga, from Paseo de la Farola.jpg",
+  "artist": "Mirokado",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Paseo_del_Muelle_Uno,_M%C3%A1laga,_from_Paseo_de_la_Farola.jpg",
+  "file": "assets/img/malaga-muelle-uno.jpg",
+  "w": 1800,
+  "h": 1350
+ },
+ "malaga-catedral": {
+  "title": "Catedral de la Encarnación, Málaga, España, 2023-05-19, DD 37-39 HDR.jpg",
+  "artist": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_Encarnaci%C3%B3n,_M%C3%A1laga,_Espa%C3%B1a,_2023-05-19,_DD_37-39_HDR.jpg",
+  "file": "assets/img/malaga-catedral.jpg",
+  "w": 1800,
+  "h": 1175
+ },
+ "malaga-gibralfaro": {
+  "title": "Da Gibralfaro (cropped).jpg",
+  "artist": "Kiban",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Da_Gibralfaro_(cropped).jpg",
+  "file": "assets/img/malaga-gibralfaro.jpg",
+  "w": 1800,
+  "h": 617
+ },
+ "malaga-larios": {
+  "title": "Calle Larios 3, Málaga 01.jpg",
+  "artist": "Tyk",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Calle_Larios_3,_M%C3%A1laga_01.jpg",
+  "file": "assets/img/malaga-larios.jpg",
+  "w": 1800,
+  "h": 1350
+ },
+ "torremolinos": {
+  "title": "Playa del Bajondillo, Torremolinos.jpg",
+  "artist": "Jl FilpoC",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Playa_del_Bajondillo,_Torremolinos.jpg",
+  "file": "assets/img/torremolinos.jpg",
+  "w": 1800,
+  "h": 1013
+ },
+ "benalmadena": {
+  "title": "Benalmádena - Puerto Marina Shopping 03.jpg",
+  "artist": "Zarateman",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Benalm%C3%A1dena_-_Puerto_Marina_Shopping_03.jpg",
+  "file": "assets/img/benalmadena.jpg",
+  "w": 1800,
+  "h": 1350
+ },
+ "fuengirola": {
+  "title": "Fuengirola Paseo Maritimo 01.jpg",
+  "artist": "Olaf Tausch",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fuengirola_Paseo_Maritimo_01.jpg",
+  "file": "assets/img/fuengirola.jpg",
+  "w": 1800,
+  "h": 1350
+ },
+ "marbella": {
+  "title": "Casco antigüo de Marbella.jpg",
+  "artist": "Ypsilon from Finland",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Casco_antig%C3%BCo_de_Marbella.jpg",
+  "file": "assets/img/marbella.jpg",
+  "w": 1800,
+  "h": 1350
+ },
+ "mijas": {
+  "title": "Mijas 10.jpg",
+  "artist": "Olaf Tausch",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mijas_10.jpg",
+  "file": "assets/img/mijas.jpg",
+  "w": 1800,
+  "h": 1351
+ },
+ "estepona": {
+  "title": "Calle aurora looking east - Estepona Garden of the Costa del Sol.jpg",
+  "artist": "Turista Inglesa",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Calle_aurora_looking_east_-_Estepona_Garden_of_the_Costa_del_Sol.jpg",
+  "file": "assets/img/estepona.jpg",
+  "w": 1800,
+  "h": 1013
+ },
+ "rincon": {
+  "title": "Beach, Rincon de la Victoria, Andalusia, Spain.jpg",
+  "artist": "Jebulon",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beach,_Rincon_de_la_Victoria,_Andalusia,_Spain.jpg",
+  "file": "assets/img/rincon.jpg",
+  "w": 1800,
+  "h": 1250
+ },
+ "velez": {
+  "title": "View of Vélez-Málaga 01.jpg",
+  "artist": "Tyk",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:View_of_V%C3%A9lez-M%C3%A1laga_01.jpg",
+  "file": "assets/img/velez.jpg",
+  "w": 1800,
+  "h": 1355
+ },
+ "antequera": {
+  "title": "Antequera y Peña de los Enamorados 1.jpg",
+  "artist": "Gzzz",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Antequera_y_Pe%C3%B1a_de_los_Enamorados_1.jpg",
+  "file": "assets/img/antequera.jpg",
+  "w": 1800,
+  "h": 1146
+ }
+}

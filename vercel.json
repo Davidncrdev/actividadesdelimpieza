@@ -23,11 +23,29 @@
       ]
     },
     {
-      "source": "/(.*\\.(?:js|css|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|xml|json|txt))",
+      "source": "/(.*\\.(?:png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|mp4|webm))",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(?:js|css))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(?:xml|json|txt))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
         }
       ]
     },
@@ -41,49 +59,18 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/servicios",
-      "destination": "/servicios.html"
-    },
-    {
-      "source": "/zonas",
-      "destination": "/zonas.html"
-    },
-    {
-      "source": "/sobre-nosotros",
-      "destination": "/sobre-nosotros.html"
-    },
-    {
-      "source": "/contacto",
-      "destination": "/contacto.html"
-    },
-    {
-      "source": "/presupuesto",
-      "destination": "/presupuesto.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    },
-    {
-      "source": "/privacidad",
-      "destination": "/politica-privacidad.html"
-    },
-    {
-      "source": "/aviso-legal",
-      "destination": "/aviso-legal.html"
-    },
-    {
-      "source": "/cookies",
-      "destination": "/cookies.html"
-    },
-    {
-      "source": "/gracias",
-      "destination": "/gracias.html"
-    }
-  ],
   "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.actividadesdelimpieza.com"
+        }
+      ],
+      "destination": "https://actividadesdelimpieza.com/$1",
+      "permanent": true
+    },
     {
       "source": "/home",
       "destination": "/",
@@ -92,6 +79,11 @@
     {
       "source": "/inicio",
       "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/politica-privacidad",
       "permanent": true
     }
   ]

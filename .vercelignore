@@ -1,0 +1,10 @@
+HANDOFF.md
+.htaccess
+package.json
+package-lock.json
+pnpm-lock.yaml
+node_modules
+js/cookies-banner.js
+build
+.taste-skill
+assets/img/credits.json

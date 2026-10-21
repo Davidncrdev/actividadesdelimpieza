@@ -44,3 +44,10 @@ vercel curl https://actividadesdelimpieza-hc9kxuf4x-davids-projects-e926ced9.ver
 vercel ls                                     # estado de deployments
 vercel project ls --scope davids-projects-e926ced9
 ```
+
+## Rediseño v5 (oct 2026)
+
+- Las páginas HTML se **generan**: edita `build/` (`build/siteinfo.py` datos, `build/build.py` plantillas, `build/posts_new.py` artículos, `build/data/*.json` contenido extraído) y ejecuta `python3 build/build.py`. No edites los `.html` a mano.
+- Estilos en `css/styles.css`, JS en `js/app.js`, fuentes Boska y fotos en `assets/`. Créditos de imágenes: `assets/img/credits.json` y `/creditos`.
+- `.vercelignore` excluye `build/`, `HANDOFF.md`, `.htaccess` y los lockfiles del despliegue.
+- Pendiente de datos reales: reseñas/cifras de clientes, dirección fiscal y NIF en el aviso legal.
