@@ -4,6 +4,7 @@ import html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from siteinfo import *            # noqa: F401,F403
 from posts_new import POSTS_NEW
+from redirects import build_redirects
 
 os.chdir(ROOT)
 esc = lambda s: html.escape(s, quote=True)
@@ -491,7 +492,20 @@ def build_servicios():
     body = f"""{hero}
 <div class="wrap">
 <section class="service-list index-list" aria-label="Lista de servicios" style="padding-top:var(--gap-section)">{rows}</section>
-<p class="credit" style="margin-bottom:var(--gap-section)">Imágenes de archivo con licencia Unsplash, a modo ilustrativo.</p>
+<article class="prose" style="margin-bottom:var(--gap-section)" data-reveal>
+<h2>Cómo elegimos el servicio adecuado</h2>
+<p>No todos los espacios se limpian igual. Una <a href="/limpieza-comunidades">comunidad de vecinos</a> pide constancia y trato con el administrador; una <a href="/limpieza-oficinas">oficina</a>, discreción y horarios fuera de la jornada; un <a href="/limpieza-colegios">colegio</a>, productos hipoalergénicos y protocolos de desinfección; un <a href="/limpieza-polideportivos">polideportivo</a>, control de hongos y suelos antideslizantes.</p>
+<p>Para superficies grandes combinamos el trabajo manual con <a href="/limpieza-con-maquinaria">maquinaria profesional</a>, y para <a href="/limpieza-parkings">parkings y garajes</a> usamos fregado mecánico. Si has terminado una reforma, la <a href="/limpieza-fin-de-obra">limpieza de fin de obra</a> deja la vivienda o el local listo para estrenar.</p>
+<h2>Qué incluye siempre el servicio</h2>
+<ul>
+<li>Visita previa sin coste cuando el espacio lo requiere.</li>
+<li>Propuesta por escrito con tareas, frecuencias, productos y precio cerrado en 24 horas laborables.</li>
+<li>Equipo propio dado de alta en la Seguridad Social y con seguro de responsabilidad civil.</li>
+<li>Una persona de contacto y un checklist en cada visita.</li>
+<li>Sin permanencia: se ajusta o se cancela con un preaviso.</li>
+</ul>
+<p>Trabajamos en <a href="/zonas">diez zonas de la provincia de Málaga</a>. Si dudas sobre qué necesitas, lee nuestras <a href="/blog">guías del blog</a> o <a href="/contacto">escríbenos</a>.</p>
+</article>
 </div>
 {reply(wa_text='Hola, me gustaría pedir un presupuesto de limpieza.')}"""
     ld = jsonld(breadcrumb([('Inicio', DOMAIN + '/'), ('Servicios', None)]),
@@ -542,9 +556,9 @@ def detail(slug, kind):
         z = ZONE_BY_SLUG[slug]
         h1, im, alt = 'Empresa de limpieza en ' + z['name'], img(z['img']), z['alt']
         parent, name = ('Zonas', '/zonas'), 'Limpieza en ' + z['name']
-        title = 'Empresa de Limpieza en %s | %s' % (z['short'], BRAND)
+        title = 'Empresa de Limpieza en %s | %s' % (z['name'], BRAND)
         if len(title) > 60:
-            title = 'Limpieza en %s | %s' % (z['short'], BRAND)
+            title = 'Limpieza en %s | %s' % (z['name'], BRAND)
     prose = prose_clean(p['prose'])
     quote = '<p class="pull">%s</p>' % esc(p['quote']) if p['quote'] else ''
     if kind == 'zone':
@@ -658,7 +672,12 @@ def build_contact():
     </form>
   </div>
 </div>
-{zones_section(['limpieza-malaga', 'limpieza-estepona', 'limpieza-mijas', 'limpieza-velez-malaga'], 'Zonas donde trabajamos')}
+<article class="prose" style="margin-bottom:var(--gap-section)" data-reveal>
+<h2>Para que tu presupuesto sea exacto</h2>
+<p>Cuanta más información nos des, más precisa será la propuesta. Si puedes, cuéntanos el tipo de espacio (<a href="/limpieza-comunidades">comunidad</a>, <a href="/limpieza-oficinas">oficina</a>, <a href="/limpieza-colegios">colegio</a>, local o <a href="/limpieza-fin-de-obra">obra</a>), los metros cuadrados aproximados, la zona y la frecuencia con la que necesitas el servicio.</p>
+<p>Si prefieres que lo veamos en persona, concertamos una visita sin coste y te enviamos la propuesta en 24 horas laborables. No hay permanencia ni compromiso.</p>
+<p>También puedes <a href="/presupuesto">pedir presupuesto con el formulario paso a paso</a> o consultar <a href="/servicios">todos los servicios</a> antes de escribirnos.</p>
+</article>
 </div>"""
     page('contacto', 'Contacto | Actividades de Limpieza en Málaga',
          'Contacta con Actividades de Limpieza en Málaga: llama o escribe por WhatsApp al 642 11 89 72, o por email. Respuesta en 24 h laborables. Lun–Vie 8:00–19:00.',
@@ -879,6 +898,10 @@ def main():
     build_about(); build_contact(); build_quote(); build_blog(posts)
     for p in posts: build_post(p, posts)
     build_legal(); build_credits(); build_thanks(); build_404(); build_meta(posts)
+    v = json.load(open('vercel.json', encoding='utf-8'))
+    v['redirects'] = build_redirects()
+    json.dump(v, open('vercel.json', 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+    open('vercel.json', 'a').write('\n')
     # CSS: zigzag
     css = open('css/styles.css', encoding='utf-8').read()
     css = re.sub(r'--zig: [^;]*;', '', css)

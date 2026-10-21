@@ -8,4 +8,4 @@ Disallow: /pnpm-lock.yaml
 Disallow: /.vercel/
 Disallow: /.git/
 
-Sitemap: https://actividadesdelimpieza.com/sitemap.xml
+Sitemap: https://www.actividadesdelimpieza.com/sitemap.xml

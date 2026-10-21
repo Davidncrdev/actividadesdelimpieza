@@ -2,7 +2,7 @@
 import json, os, struct
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOMAIN = 'https://actividadesdelimpieza.com'
+DOMAIN = 'https://www.actividadesdelimpieza.com'
 PHONE = '642 11 89 72'
 TEL = '642118972'
 WA = '34642118972'

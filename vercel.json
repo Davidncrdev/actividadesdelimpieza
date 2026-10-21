@@ -65,14 +65,289 @@
       "has": [
         {
           "type": "host",
-          "value": "www.actividadesdelimpieza.com"
+          "value": "actividadesdelimpieza.com"
         }
       ],
-      "destination": "https://actividadesdelimpieza.com/$1",
+      "destination": "https://www.actividadesdelimpieza.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-en-malaga",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-en-malaga/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author/condursa",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author/condursa/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/actividades-de-limpieza-en-malaga.html",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-malaga.html",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/especialistas-en-mantenimiento-y-limpieza-en-malaga.html",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-teatinos.html",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-el-limonar.html",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-cruz-de-humilladero",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-cruz-de-humilladero/",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-cerrado-calderon",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-cerrado-calderon/",
+      "destination": "/limpieza-malaga",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-benalmadena.html",
+      "destination": "/limpieza-benalmadena",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-y-mantenimiento-en-rincon-de-la-victoria.html",
+      "destination": "/limpieza-rincon-de-la-victoria",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-malaga",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-malaga/",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-el-palo-malaga",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-el-palo-malaga/",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-teatinos",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-teatinos/",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-benalmadena",
+      "destination": "/limpieza-benalmadena",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-y-empresas-en-benalmadena/",
+      "destination": "/limpieza-benalmadena",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-de-oficinas-en-malaga.html",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-de-limpieza-de-locales-comerciales-en-malaga.html",
+      "destination": "/limpieza-oficinas",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-rincon-de-la-victoria",
+      "destination": "/limpieza-rincon-de-la-victoria",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-rincon-de-la-victoria/",
+      "destination": "/limpieza-rincon-de-la-victoria",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-en-benalmadena",
+      "destination": "/limpieza-benalmadena",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-en-benalmadena/",
+      "destination": "/limpieza-benalmadena",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-en-cruz-de-humilladero",
+      "destination": "/limpieza-comunidades",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-en-cruz-de-humilladero/",
+      "destination": "/limpieza-comunidades",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-en-teatinos",
+      "destination": "/limpieza-comunidades",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-en-teatinos/",
+      "destination": "/limpieza-comunidades",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-y-mantenimiento-de-comunidades-en-malaga.html",
+      "destination": "/limpieza-comunidades",
+      "permanent": true
+    },
+    {
+      "source": "/mantenimiento-de-comunidades-en-general-en-malaga.html",
+      "destination": "/limpieza-comunidades",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-finalizacion-de-obra-locales-comerciales-malaga-provincia",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-finalizacion-de-obra-locales-comerciales-malaga-provincia/",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-especialista-limpieza-fin-de-obra-en-malaga",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-especialista-limpieza-fin-de-obra-en-malaga/",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-fin-de-obra-en-benalmadena",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-fin-de-obra-en-benalmadena/",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-fin-de-obra-en-teatinos",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-fin-de-obra-en-teatinos/",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-fin-de-obra-en-cruz-de-humilladero",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/limpieza-fin-de-obra-en-cruz-de-humilladero/",
+      "destination": "/limpieza-fin-de-obra",
+      "permanent": true
+    },
+    {
+      "source": "/especialistas-en-limpieza-de-parkings-en-malaga.html",
+      "destination": "/limpieza-parkings",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-desinfeccion-en-comunidades-y-locales-comerciales-malaga",
+      "destination": "/servicios",
+      "permanent": true
+    },
+    {
+      "source": "/empresa-desinfeccion-en-comunidades-y-locales-comerciales-malaga/",
+      "destination": "/servicios",
+      "permanent": true
+    },
+    {
+      "source": "/galeria",
+      "destination": "/servicios",
+      "permanent": true
+    },
+    {
+      "source": "/galeria/",
+      "destination": "/servicios",
+      "permanent": true
+    },
+    {
+      "source": "/accesibilidad",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/accesibilidad/",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
       "destination": "/",
       "permanent": true
     },
@@ -82,7 +357,17 @@
       "permanent": true
     },
     {
+      "source": "/inicio/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/privacidad",
+      "destination": "/politica-privacidad",
+      "permanent": true
+    },
+    {
+      "source": "/privacidad/",
       "destination": "/politica-privacidad",
       "permanent": true
     }
